@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dragDrop</title>
+</head>
+<body>
+<div id="name"></div>
+<script>
+/*
+	//store item
+	if(typeof(Storage)!=="undefined"){
+	localStorage.setItem('name','John doe');
+//remove item
+	//localStorage.removeItem('name');
+	// get item
+	console.log(localStorage.getItem('name'));
+	
+
+	if(localStorage.name){
+		document.getElementById('name').innerHTML=localStorage.getItem('name');
+	}
+	else{
+		document.getElementById('name').innerHTML='no name found';
+	}
+}	
+else{
+	console.log('localStorage not available.')
+}
+*/
+//store item
+	if(typeof(Storage)!=="undefined"){
+	sessionStorage.setItem('name','Matt Smith');
+//remove item
+	//localStorage.removeItem('name');
+	// get item
+	console.log(sessionStorage.getItem('name'));
+	
+
+	if(sessionStorage.name){
+		document.getElementById('name').innerHTML=sessionStorage.getItem('name');
+	}
+	else{
+		document.getElementById('name').innerHTML='no name found';
+	}
+}	
+else{
+	console.log('sessionStorage not available.')
+}
+</script>
+
+
+</body>
+</html>

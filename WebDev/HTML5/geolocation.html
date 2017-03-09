@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>geolocation</title>
+	
+
+</head>
+<body>
+<div id="container">
+	<button onclick="getLocation()">Get Coords</button>
+	<h1 id=coords></h1>
+	<script>
+		var x =document.getElementById('coords');
+		function getLocation() {
+			// body...
+			if(navigator.geolocation){navigator.geolocation.getCurrentPosition(showPosition);
+			}
+			else{
+				x.innerHTML="Geoloc is not support";
+			}
+			function showPosition(position) {
+				//console.log();
+				// body...
+				x.innerHTML="Latitude: "+position.coords.latitude+
+				"<br> Longitude: "+position.coords.longitude;
+			}
+		}
+	</script>
+
+</div>
+</body>
+</html>
